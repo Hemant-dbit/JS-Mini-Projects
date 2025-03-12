@@ -40,7 +40,7 @@ function getRandomHexString(stringLength) {
   return hexString;
 }
 
-newColourBtnElement.addEventListener("click", function () {
+newColourBtnElement.addEventListener("click", () => {
   const randomHexString = "#" + getRandomHexString(6);
 
   document.body.style.setProperty("background-color", randomHexString);
