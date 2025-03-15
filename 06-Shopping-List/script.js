@@ -12,17 +12,21 @@ class ShoppingList {
     this.items = JSON.parse(localStorage.getItem(storageKey)) || [
       "apples",
       "oranges",
-    ];
+    ]; //Converts stored JSON string into a JavaScript array.
 
     this.initialise();
   }
 
   initialise() {
     this.addItemButtonElement.addEventListener("click", () => {
-      this.addItem(this.newItemTextElement.value);
-      this.newItemTextElement.value = "";
-      this.renderItems();
-      this.storeItems();
+      if (this.newItemTextElement.value === "") {
+        alert("Textfield is empty!");
+      } else {
+        this.addItem(this.newItemTextElement.value);
+        this.newItemTextElement.value = "";
+        this.renderItems();
+        this.storeItems();
+      }
     });
 
     this.renderItems();
@@ -69,6 +73,6 @@ class ShoppingList {
 
 const myShoppingList = new ShoppingList(
   "#shoppingListItems",
-  "#addItem",
-  "#newItemText"
+  "#addButton",
+  "#addItem"
 );
