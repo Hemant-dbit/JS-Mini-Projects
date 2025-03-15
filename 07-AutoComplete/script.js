@@ -49,6 +49,10 @@ const autoComplete = () => {
                 <td><img src="${product.image}"></td>
                 </tr>`;
     });
+    const messageElement = document.createElement("p");
+    messageElement.textContent =
+      "Click on any element to search something else!";
+    autoCompleteResultsElement.appendChild(messageElement);
   });
 };
 
