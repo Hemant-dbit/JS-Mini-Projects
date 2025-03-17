@@ -8,11 +8,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35vh;
 }
 
 #userDirectory {
-  background: blue;
+  /* background: blue; */
   padding: 1rem 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
